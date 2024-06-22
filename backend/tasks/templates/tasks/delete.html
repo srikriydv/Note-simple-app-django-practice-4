@@ -1,0 +1,17 @@
+{% extends "tasks/base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <p>Are you sure you want to delete "{{ item }}"?</p>
+            <div class="d-flex justify-content-center">
+                <a href="{% url 'list' %}" class="btn btn-secondary me-5">Cancel</a>
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <input type="submit" name="Confirm" class="btn btn-danger" value="Confirm" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
