@@ -1,1 +1,1 @@
-# react-django-rest-app
+# django note app
